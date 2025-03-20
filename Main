@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Checker</title>
+</head>
+<body>
+    <h1>Answer Checker</h1>
+    <p>Choose a category and question to see the correct answer.</p>
+
+    <!-- Dropdown for categories -->
+    <label for="category">Choose a category:</label>
+    <select id="category">
+        <option value="Harry Potter">Harry Potter</option>
+        <option value="Star Wars">Star Wars</option>
+        <option value="Science">Science</option>
+        <option value="Law">Law</option>
+        <option value="Weather">Weather</option>
+    </select>
+
+    <br><br>
+
+    <!-- Dropdown for question numbers -->
+    <label for="question">Choose a question number:</label>
+    <select id="question">
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+    </select>
+
+    <br><br>
+
+    <!-- Button to get the answer -->
+    <button onclick="showAnswer()">Show Answer</button>
+
+    <h2 id="answer"></h2>
+
+    <script>
+        // Answer data
+        const answers = {
+            'Harry Potter': {
+                100: "Hogwarts Express",
+                200: "Colin Creevey",
+                300: "Accio",
+                400: "Severus Snape",
+                500: "Sectumsempra"
+            },
+            'Star Wars': {
+                100: "Millennium Falcon",
+                200: "Obi-Wan Kenobi",
+                300: "Alderaan",
+                400: "Mon Mothma",
+                500: "Captain Rex"
+            },
+            'Science': {
+                100: "CO₂",
+                200: "Nitrogen",
+                300: "Mars",
+                400: "Gravity",
+                500: "Isaac Newton"
+            },
+            'Law': {
+                100: "Judicial Branch",
+                200: "Larceny",
+                300: "35 years old",
+                400: "Contract",
+                500: "Plessy v. Ferguson"
+            },
+            'Weather': {
+                100: "Thunderstorms",
+                200: "Barometer",
+                300: "Cyclone",
+                400: "Saffir-Simpson scale",
+                500: "Heatwave"
+            }
+        };
+
+        // Function to show the answer
+        function showAnswer() {
+            const category = document.getElementById('category').value;
+            const question = parseInt(document.getElementById('question').value);
+
+            // Get the correct answer from the data
+            const answer = answers[category] ? answers[category][question] : null;
+
+            // Display the answer
+            if (answer) {
+                document.getElementById('answer').innerText = `The answer for ${category} - Question ${question} is: ${answer}`;
+            } else {
+                document.getElementById('answer').innerText = 'Invalid category or question number.';
+            }
+        }
+    </script>
+</body>
+</html>
