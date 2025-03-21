@@ -39,3 +39,12 @@ button {
 #answer-container {
   margin-top: 20px;
 }
+
+#scoreboard {
+  margin-top: 50px;
+}
+
+#team-scores p {
+  font-size: 18px;
+  margin: 5px 0;
+}
