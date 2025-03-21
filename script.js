@@ -165,4 +165,17 @@ function createBoard() {
 
     // Create question buttons for each category
     const points = [100, 200, 300, 400, 500];
-    points.forEach(p
+    points.forEach(point => {
+      const questionButton = document.createElement('button');
+      questionButton.classList.add('question-btn');
+      questionButton.innerText = point;
+      questionButton.onclick = () => showQuestion(category, point);
+      categoryDiv.appendChild(questionButton);
+    });
+
+    board.appendChild(categoryDiv);
+  });
+}
+
+// Call the function to create the board when the page loads
+window.onload = createBoard;
