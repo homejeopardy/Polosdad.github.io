@@ -37,6 +37,14 @@ const questions = {
   }
 };
 
+// Store scores
+const scores = {
+  "Team 1": 0,
+  "Team 2": 0,
+  "Team 3": 0,
+  "Team 4": 0
+};
+
 // Function to show the question when a button is clicked
 function showQuestion(category, points) {
   const questionContainer = document.getElementById('question-container');
@@ -118,14 +126,25 @@ function markCorrect(category, points, status) {
 
   // Assign points to the selected team if correct
   if (status === 'Correct') {
+    scores[teamName] += points;
     alert(`${teamName} answered correctly and gets ${points} points!`);
   } else {
     alert(`${teamName} answered incorrectly.`);
   }
 
+  // Update the scoreboard
+  updateScoreboard();
+
   // Close the question and update the board
   document.getElementById('question-container').innerHTML = '';
   document.getElementById('answer-container').innerHTML = '';
+}
+
+// Function to update the scoreboard
+function updateScoreboard() {
+  for (const team in scores) {
+    document.getElementById(`${team.toLowerCase().replace(' ', '-')}-score`).textContent = scores[team];
+  }
 }
 
 // Function to create the board dynamically
@@ -141,22 +160,9 @@ function createBoard() {
     const categoryButton = document.createElement('button');
     categoryButton.classList.add('category-btn');
     categoryButton.innerText = category;
-    categoryButton.onclick = () => alert(`You clicked on ${category}`);
+    categoryButton.disabled = true; // Disable category button
     categoryDiv.appendChild(categoryButton);
 
     // Create question buttons for each category
     const points = [100, 200, 300, 400, 500];
-    points.forEach(point => {
-      const questionButton = document.createElement('button');
-      questionButton.classList.add('question-btn');
-      questionButton.innerText = point;
-      questionButton.onclick = () => showQuestion(category, point);
-      categoryDiv.appendChild(questionButton);
-    });
-
-    board.appendChild(categoryDiv);
-  });
-}
-
-// Call the function to create the board when the page loads
-window.onload = createBoard;
+    points.forEach(p
