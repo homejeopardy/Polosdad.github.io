@@ -1,52 +1,56 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 h1 {
-    color: #333;
+  margin-top: 20px;
 }
 
 .board {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
 }
 
 .category {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    width: 150px;
-    text-align: center;
+  margin: 10px;
 }
 
 .category-btn {
-    background-color: #2C8B2F;
-    color: white;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+  display: block;
+  width: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .category-btn:hover {
-    background-color: #388E3C;
+  background-color: #0056b3;
 }
 
 .question-btn {
-    background-color: #2196F3;
-    color: white;
-    margin: 5px;
-    width: 100px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .question-btn:hover {
-    background-color: #1976D2;
+  background-color: #218838;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#answer-container {
+  margin-top: 20px;
 }
