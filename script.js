@@ -173,3 +173,4 @@ function createBoard() {
 
 // Call the function to create the board when the page loads
 window.onload = createBoard;
+
