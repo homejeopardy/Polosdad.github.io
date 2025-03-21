@@ -122,28 +122,24 @@ function getAnswer(category, points) {
 // Function to mark the answer as correct or incorrect and assign points to a team
 function markCorrect(category, points, status) {
   const teamSelect = document.getElementById('team-select');
-  const teamName = teamSelect.value;
-
-  // Assign points to the selected team if correct
+  const team = teamSelect.value;
+  const scoreElement = document.getElementById(`${team.toLowerCase()}-score`);
+  
   if (status === 'Correct') {
-    scores[teamName] += points;
-    alert(`${teamName} answered correctly and gets ${points} points!`);
+    scores[team] += points;
   } else {
-    alert(`${teamName} answered incorrectly.`);
+    scores[team] -= points;
   }
 
   // Update the scoreboard
   updateScoreboard();
-
-  // Close the question and update the board
-  document.getElementById('question-container').innerHTML = '';
-  document.getElementById('answer-container').innerHTML = '';
+  alert(`${team} answered ${status} for ${points} points!`);
 }
 
 // Function to update the scoreboard
 function updateScoreboard() {
   for (const team in scores) {
-    document.getElementById(`${team.toLowerCase().replace(' ', '-')}-score`).textContent = scores[team];
+    document.getElementById(`${team.toLowerCase()}-score`).textContent = scores[team];
   }
 }
 
@@ -151,18 +147,17 @@ function updateScoreboard() {
 function createBoard() {
   const board = document.querySelector('.board');
   const categories = Object.keys(questions);
-  
   categories.forEach(category => {
     const categoryDiv = document.createElement('div');
     categoryDiv.classList.add('category');
-
+    
     // Create category button
     const categoryButton = document.createElement('button');
     categoryButton.classList.add('category-btn');
     categoryButton.innerText = category;
-    categoryButton.disabled = true; // Disable category button
+    categoryButton.disabled = true;  // Disable the category button
     categoryDiv.appendChild(categoryButton);
-
+    
     // Create question buttons for each category
     const points = [100, 200, 300, 400, 500];
     points.forEach(point => {
@@ -172,7 +167,6 @@ function createBoard() {
       questionButton.onclick = () => showQuestion(category, point);
       categoryDiv.appendChild(questionButton);
     });
-
     board.appendChild(categoryDiv);
   });
 }
