@@ -131,7 +131,7 @@ function markCorrect(category, points, status) {
   } else {
     alert(`${teamName} answered incorrectly.`);
   }
-  
+
   // Update the scoreboard
   updateScoreboard();
 
