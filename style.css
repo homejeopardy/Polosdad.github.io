@@ -11,6 +11,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .category {
@@ -25,6 +26,7 @@ h1 {
   color: white;
   border: none;
   cursor: pointer;
+  width: 100px; /* Ensuring consistent button size */
 }
 
 .category-btn:hover, .question-btn:hover {
@@ -36,7 +38,7 @@ button {
   font-size: 16px;
 }
 
-#answer-container {
+#question-container, #answer-container {
   margin-top: 20px;
 }
 
@@ -48,4 +50,3 @@ button {
   font-size: 18px;
   margin: 5px 0;
 }
-
