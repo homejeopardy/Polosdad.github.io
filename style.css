@@ -73,5 +73,18 @@ button {
   font-weight: bold;
 }
 
+.category-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
 
-
+.category-btn:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
