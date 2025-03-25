@@ -1,38 +1,38 @@
 const categories = {
-    "The Skywalker Saga": {
-        100: ["Luke and Anakin Skywalker both called this arid planet home.", "What is Tatooine?"],
-        200: ["Before becoming Darth Vader, this Jedi was a skilled pilot and warrior.", "Who is Anakin Skywalker?"],
-        300: ["Anakin Skywalker’s final word before taking his last breath.", "What is 'Luke'?"],
-        400: ["This actor portrayed Luke Skywalker in the original *Star Wars* trilogy.", "Who is Mark Hamill?"],
-        500: ["The surname Leia had before discovering she was a Skywalker.", "What is Organa?"]
+    "History Happens": {
+        200: ["This document, signed in 1215, limited the power of the English king and laid the foundation for constitutional government.", "What is the Magna Carta?"],
+        400: ["The first shots of the American Revolution were fired in this Massachusetts town in 1775.", "What is Lexington?"],
+        600: ["This U.S. President issued the Emancipation Proclamation in 1863.", "Who is Abraham Lincoln?"],
+        800: ["In 1066, William the Conqueror invaded England from this region of France.", "What is Normandy?"],
+        1000: ["The Berlin Wall fell in this year, marking the beginning of the end of the Cold War.", "What is 1989?"]
     },
-    "The Force": {
-        100: ["These microscopic organisms determine one's connection to the Force.", "What are midi-chlorians?"],
-        200: ["This wise Jedi Master offered the advice, 'Do or do not. There is no try.'", "Who is Yoda?"],
-        300: ["A guiding principle of the Sith states there should only be a master and an apprentice.", "What is the Rule of Two?"],
-        400: ["Jedi who have passed on can return in spectral form using this ability.", "What is a Force Ghost?"],
-        500: ["This ancient Mandalorian Jedi was the first to wield the Darksaber.", "Who is Tarre Vizsla?"]
+    "Movie Quotes": {
+        200: ["'There's no place like home.'", "What is The Wizard of Oz?"],
+        400: ["'I'm the king of the world!'", "What is Titanic?"],
+        600: ["'May the Force be with you.'", "What is Star Wars?"],
+        800: ["'You can't handle the truth!'", "What is A Few Good Men?"],
+        1000: ["'Hasta la vista, baby.'", "What is Terminator 2: Judgment Day?"]
     },
-    "Ships & Vehicles": {
-        100: ["This ship, piloted by Han Solo, made the Kessel Run in less than 12 parsecs.", "What is the Millennium Falcon?"],
-        200: ["The standard fighter used by Imperial pilots during battles.", "What are TIE Fighters?"],
-        300: ["These towering war machines were used by the Empire to attack the Rebel base on Hoth.", "What is an AT-AT?"],
-        400: ["Boba Fett’s starship, later renamed in official *Star Wars* media.", "What is Slave I (now Firespray-31 Patrol Craft)?"],
-        500: ["The model of the Rebel blockade runner seen at the beginning of *A New Hope*.", "What is a CR90 Corvette?"]
+    "Literary Legends": {
+        200: ["This author wrote *Romeo and Juliet* and *Hamlet*.", "Who is William Shakespeare?"],
+        400: ["*Moby-Dick* features this obsessive captain hunting a great white whale.", "Who is Captain Ahab?"],
+        600: ["This classic novel by George Orwell features the phrase 'Big Brother is watching you.'", "What is 1984?"],
+        800: ["*The Great Gatsby* was written by this American author.", "Who is F. Scott Fitzgerald?"],
+        1000: ["This Russian novel features the character Raskolnikov, who debates morality after committing murder.", "What is Crime and Punishment?"]
     },
-    "Famous Quotes": {
-        100: ["This villain shocked the galaxy when he revealed, 'I am your father!'", "Who is Darth Vader?"],
-        200: ["Han Solo greeted an old friend with this memorable line: 'Chewie, we’re home.'", "Who is Han Solo?"],
-        300: ["Ahsoka Tano made this declaration to distance herself from the Jedi Order.", "What is 'I am no Jedi.'"],
-        400: ["This catchphrase is spoken by members of the Mandalorian creed.", "What is 'This is the way.'"],
-        500: ["A Mon Calamari leader warned of an incoming attack with this famous phrase.", "What is 'It’s a trap!'"]
+    "Tech Talk": {
+        200: ["The 'www' in a website address stands for this.", "What is the World Wide Web?"],
+        400: ["This billionaire founded Microsoft in 1975.", "Who is Bill Gates?"],
+        600: ["In 2021, Facebook changed its parent company’s name to this.", "What is Meta?"],
+        800: ["This co-founder of Apple introduced the first iPhone in 2007.", "Who is Steve Jobs?"],
+        1000: ["This programming language, named after a type of coffee, was released by Sun Microsystems in 1995.", "What is Java?"]
     },
-    "The Clone Wars": {
-        100: ["These soldiers, grown from Jango Fett’s DNA, served the Galactic Republic.", "Who are Clone Troopers?"],
-        200: ["This young Togruta Jedi was assigned as Anakin Skywalker’s Padawan.", "Who is Ahsoka Tano?"],
-        300: ["The Sith mastermind who manipulated both sides of the Clone Wars.", "Who is Darth Sidious?"],
-        400: ["This decorated clone officer fought alongside Anakin Skywalker in the 501st Legion.", "Who is Captain Rex?"],
-        500: ["This emergency directive forced Clone Troopers to execute Jedi commanders.", "What is Order 66?"]
+    "The Animal Kingdom": {
+        200: ["The largest land animal in the world.", "What is an elephant?"],
+        400: ["This bird is known for its ability to mimic human speech.", "What is a parrot?"],
+        600: ["The only marsupial native to North America.", "What is the opossum?"],
+        800: ["A group of lions is called this.", "What is a pride?"],
+        1000: ["This deep-sea creature can produce its own light through bioluminescence.", "What is an anglerfish?"]
     }
 };
 
