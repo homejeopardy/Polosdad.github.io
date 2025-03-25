@@ -149,4 +149,11 @@ function updateScore(correct) {
         currentButton.style.backgroundColor = "#222"; // Change to a "used" style
         currentButton.style.cursor = "not-allowed";
     }
+
+    // Check if all questions have been answered
+    const remainingQuestions = document.querySelectorAll(".question:not([disabled])").length;
+    if (remainingQuestions === 0) {
+        const completionSound = document.getElementById("completion-sound");
+        completionSound.play();
+    }
 }
